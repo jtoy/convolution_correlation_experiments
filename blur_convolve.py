@@ -13,6 +13,7 @@ blur_kernel = np.zeros([5, 5]) / 5**2
 blur_kernel = np.array([[1.0,2.0,1.0], [2.0,4.0,2.0], [1.0,2.0,1.0]]) / 3**2
 blur_kernel = np.ones((7, 7), dtype="float") * (1.0 / (7 * 7))
 blur_kernel = np.ones((5, 5), dtype="float") / 5**2
+#blur_kernel = np.array(( [0, -1, 0], [-1, 5, -1], [0, -1, 0]), dtype="int") #this sharpen effect seems to make ugly images
 
 print("shape:", pix.shape)
 blurred_pix = np.zeros(pix.shape)
