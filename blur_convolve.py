@@ -10,10 +10,10 @@ img = Image.open(file)
 pix = np.array(img)
 
 blur_kernel = np.zeros([5, 5]) / 5**2
-blur_kernel = np.array([[1.0,2.0,1.0], [2.0,4.0,2.0], [1.0,2.0,1.0]]) / 3**2
 blur_kernel = np.ones((7, 7), dtype="float") * (1.0 / (7 * 7))
 blur_kernel = np.ones((5, 5), dtype="float") / 5**2
 #blur_kernel = np.array(( [0, -1, 0], [-1, 5, -1], [0, -1, 0]), dtype="int") #this sharpen effect seems to make ugly images
+blur_kernel = np.array([[1.0,2.0,1.0], [2.0,4.0,2.0], [1.0,2.0,1.0]]) / 3**2
 
 print("shape:", pix.shape)
 blurred_pix = np.zeros(pix.shape)
@@ -25,6 +25,7 @@ def convolve(pix, kernel):
     output = np.zeros((ph,pw), dtype="float32")
     roi = np.zeros((kh,kw), dtype="float32")
     pix = cv2.copyMakeBorder(pix, pad, pad, pad, pad, cv2.BORDER_REPLICATE)
+    # add create new matrxi with 0s, and put the smaller matrix at the right position
     for x in range(pad,pw+pad):
         for y in range(pad,ph+pad):
             roi = pix[x-pad:x+pad+1,y-pad:y+pad+1]
