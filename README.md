@@ -23,6 +23,6 @@ https://en.wikipedia.org/wiki/Convolution
 ->
 ![](https://github.com/jtoy/convolution_correlation_experiments/blob/main/images/sac_sin.jpg?raw=true)
 
-![](https://github.com/jtoy/convolution_correlation_experiments/blob/main/images/checkers_dist.png?raw=true)
+![](https://github.com/jtoy/convolution_correlation_experiments/blob/main/images/checker_dist.png?raw=true)
 ->
-![](https://github.com/jtoy/convolution_correlation_experiments/blob/main/images/sac_checkers_dist.jpg?raw=true)
+![](https://github.com/jtoy/convolution_correlation_experiments/blob/main/images/sac_checker_dist.jpg?raw=true)
